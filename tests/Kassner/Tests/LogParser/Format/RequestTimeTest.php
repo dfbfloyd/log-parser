@@ -5,12 +5,13 @@ declare(strict_types = 1);
 namespace Kassner\Tests\LogParser\Format;
 
 use Kassner\LogParser\LogParser;
+use PHPUnit\Framework\TestCase;
 
 /**
  * @format %T
  * @description The request time
  */
-class RequestTimeTest extends \PHPUnit_Framework_TestCase
+class RequestTimeTest extends TestCase
 {
   protected $parser;
 

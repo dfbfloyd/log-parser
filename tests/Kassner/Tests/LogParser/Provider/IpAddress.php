@@ -3,8 +3,9 @@
 declare(strict_types = 1);
 
 namespace Kassner\Tests\LogParser\Provider;
+use PHPUnit\Framework\TestCase;
 
-class IpAddress extends \PHPUnit_Framework_TestCase
+class IpAddress extends TestCase
 {
     public function successProvider(): array
     {

@@ -6,8 +6,9 @@ namespace Kassner\Tests\LogParser;
 
 use Kassner\LogParser\LogParser;
 use Kassner\Tests\LogParser\Entry\Fake as FakeEntry;
+use PHPUnit\Framework\TestCase;
 
-class CreateEntryTest extends \PHPUnit_Framework_TestCase
+class CreateEntryTest extends TestCase
 {
     public function testCreateEnty(): void
     {

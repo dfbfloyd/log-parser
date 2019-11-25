@@ -5,8 +5,9 @@ declare(strict_types = 1);
 namespace Kassner\Teste\LogParser\Issue;
 
 use Kassner\LogParser\LogParser;
+use PHPUnit\Framework\TestCase;
 
-class Issue30Test extends \PHPUnit_Framework_TestCase
+class Issue30Test extends TestCase
 {
     public function testCustomFormat(): void
     {

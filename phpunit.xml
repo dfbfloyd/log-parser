@@ -1,6 +1,15 @@
-<phpunit colors="true" verbose="true" bootstrap="tests/bootstrap.php">
+<phpunit
+  bootstrap="tests/bootstrap.php"
+  colors="true"
+  verbose="true"
+  beStrictAboutTestsThatDoNotTestAnything="true"
+  beStrictAboutChangesToGlobalState="true"
+  convertErrorsToExceptions="true"
+  convertNoticesToExceptions="true"
+  convertWarningsToExceptions="true"
+>
     <testsuites>
-        <testsuite name="log-parser testsuite">
+        <testsuite name="Test Suite log-parser Package">
             <directory>tests</directory>
         </testsuite>
     </testsuites>

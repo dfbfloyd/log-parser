@@ -5,8 +5,9 @@ declare(strict_types = 1);
 namespace Kassner\Teste\LogParser\Issue;
 
 use Kassner\LogParser\LogParser;
+use PHPUnit\Framework\TestCase;
 
-class Issue5Test extends \PHPUnit_Framework_TestCase
+class Issue5Test extends TestCase
 {
     public function testReferersAndAgents(): void
     {

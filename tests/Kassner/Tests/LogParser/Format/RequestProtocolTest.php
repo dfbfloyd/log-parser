@@ -5,12 +5,13 @@ declare(strict_types = 1);
 namespace Kassner\Tests\LogParser\Format;
 
 use Kassner\LogParser\LogParser;
+use PHPUnit\Framework\TestCase;
 
 /**
  * @format %H
  * @description The request protocol
  */
-class RequestProtocolTest extends \PHPUnit_Framework_TestCase
+class RequestProtocolTest extends TestCase
 {
   protected $parser;
 

@@ -5,12 +5,13 @@ declare(strict_types = 1);
 namespace Kassner\Tests\LogParser\Format;
 
 use Kassner\LogParser\LogParser;
+use PHPUnit\Framework\TestCase;
 
 /**
  * @format %S
  * @description Scheme
  */
-class SchemeTest extends \PHPUnit_Framework_TestCase
+class SchemeTest extends TestCase
 {
   protected $parser;
 

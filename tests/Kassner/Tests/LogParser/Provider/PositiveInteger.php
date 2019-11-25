@@ -3,8 +3,9 @@
 declare(strict_types = 1);
 
 namespace Kassner\Tests\LogParser\Provider;
+use PHPUnit\Framework\TestCase;
 
-class PositiveInteger extends \PHPUnit_Framework_TestCase
+class PositiveInteger extends TestCase
 {
     public function successProvider(): array
     {
