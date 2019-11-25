@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types = 1);
+
 namespace Kassner\Teste\LogParser\Issue;
 
 use Kassner\LogParser\LogParser;

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types = 1);
+
 namespace Kassner\Tests\LogParser\Provider;
 
 class IpAddress extends \PHPUnit_Framework_TestCase
