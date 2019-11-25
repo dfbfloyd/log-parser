@@ -13,7 +13,7 @@ use Kassner\Tests\LogParser\Provider\PositiveInteger as PositiveIntegerProvider;
  */
 class BytesSentTest extends PositiveIntegerProvider
 {
-    protected $parser = null;
+  protected $parser;
 
     protected function setUp(): void
     {

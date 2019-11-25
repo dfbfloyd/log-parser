@@ -12,7 +12,7 @@ use Kassner\LogParser\LogParser;
  */
 class RequestMethodTest extends \PHPUnit_Framework_TestCase
 {
-    protected $parser = null;
+  protected $parser;
 
     protected function setUp(): void
     {

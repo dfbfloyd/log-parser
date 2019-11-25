@@ -13,7 +13,7 @@ use Kassner\Tests\LogParser\Provider\HostName as HostNameProvider;
  */
 class ServerNameTest extends HostNameProvider
 {
-    protected $parser = null;
+  protected $parser;
 
     protected function setUp(): void
     {

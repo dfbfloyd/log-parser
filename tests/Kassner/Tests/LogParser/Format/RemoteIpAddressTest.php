@@ -13,7 +13,7 @@ use Kassner\Tests\LogParser\Provider\IpAddress as IpAddressProvider;
  */
 class RemoteIpAddressTest extends IpAddressProvider
 {
-    protected $parser = null;
+  protected $parser;
 
     protected function setUp(): void
     {
