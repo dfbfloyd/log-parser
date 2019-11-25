@@ -9,7 +9,7 @@ use Kassner\Tests\LogParser\Entry\Fake as FakeEntry;
 
 class CreateEntryTest extends \PHPUnit_Framework_TestCase
 {
-    public function testCreateEnty()
+    public function testCreateEnty(): void
     {
         $parser = new LogParser('%h');
         $entry = $parser->parse('66.249.74.132');
@@ -18,7 +18,7 @@ class CreateEntryTest extends \PHPUnit_Framework_TestCase
         $this->assertInstanceOf('\stdClass', $entry);
     }
 
-    public function testCreateEntyMocked()
+    public function testCreateEntyMocked(): void
     {
         $mock = $this->getMock('\Kassner\LogParser\LogParser', array('createEntry'), array('%h'));
         $mock->expects($this->any())->method('createEntry')->willReturn(new FakeEntry());

@@ -15,13 +15,13 @@ class ServerNameTest extends HostNameProvider
 {
     protected $parser = null;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->parser = new LogParser();
         $this->parser->setFormat('%v');
     }
 
-    protected function tearDown()
+    protected function tearDown(): void
     {
         $this->parser = null;
     }
@@ -29,7 +29,7 @@ class ServerNameTest extends HostNameProvider
     /**
      * @dataProvider successProvider
      */
-    public function testSuccess($line)
+    public function testSuccess($line): void
     {
         $entry = $this->parser->parse($line);
         $this->assertEquals($line, $entry->serverName);
@@ -39,7 +39,7 @@ class ServerNameTest extends HostNameProvider
      * @expectedException \Kassner\LogParser\FormatException
      * @dataProvider invalidProvider
      */
-    public function testInvalid($line)
+    public function testInvalid($line): void
     {
         $this->markTestIncomplete('This test has not been implemented yet.');
         $this->parser->parse($line);

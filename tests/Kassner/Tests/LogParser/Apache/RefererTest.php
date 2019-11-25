@@ -8,7 +8,7 @@ use Kassner\LogParser\LogParser;
 
 class RefererTest extends \PHPUnit_Framework_TestCase
 {
-    public function testFormat()
+    public function testFormat(): void
     {
         $parser = new LogParser('%{Referer}i -> %U');
 

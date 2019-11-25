@@ -8,7 +8,7 @@ use Kassner\LogParser\LogParser;
 
 class AgentTest extends \PHPUnit_Framework_TestCase
 {
-    public function testFormat()
+    public function testFormat(): void
     {
         $parser = new LogParser('%{User-agent}i');
 

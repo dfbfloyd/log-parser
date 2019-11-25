@@ -8,7 +8,7 @@ use Kassner\LogParser\LogParser;
 
 class CombinedTest extends \PHPUnit_Framework_TestCase
 {
-    public function testFormat()
+    public function testFormat(): void
     {
         $parser = new LogParser('%h %l %u %t "%r" %>s %O "%{Referer}i" "%{User-Agent}i"');
 
@@ -68,7 +68,7 @@ class CombinedTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('-', $entry->HeaderUserAgent);
     }
 
-    public function testHttp2Format()
+    public function testHttp2Format(): void
     {
         $parser = new LogParser('%h %l %u "%r" %>s %O "%{Referer}i" "%{User-Agent}i"');
 

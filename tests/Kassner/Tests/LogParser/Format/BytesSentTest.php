@@ -15,13 +15,13 @@ class BytesSentTest extends PositiveIntegerProvider
 {
     protected $parser = null;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->parser = new LogParser();
         $this->parser->setFormat('%O');
     }
 
-    protected function tearDown()
+    protected function tearDown(): void
     {
         $this->parser = null;
     }
@@ -29,7 +29,7 @@ class BytesSentTest extends PositiveIntegerProvider
     /**
      * @dataProvider successProvider
      */
-    public function testSuccess($line)
+    public function testSuccess($line): void
     {
         $entry = $this->parser->parse($line);
         $this->assertEquals($line, $entry->sentBytes);
@@ -39,7 +39,7 @@ class BytesSentTest extends PositiveIntegerProvider
      * @expectedException \Kassner\LogParser\FormatException
      * @dataProvider invalidProvider
      */
-    public function testInvalid($line)
+    public function testInvalid($line): void
     {
         $this->parser->parse($line);
     }

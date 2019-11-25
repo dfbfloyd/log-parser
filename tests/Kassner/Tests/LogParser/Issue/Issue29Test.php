@@ -8,7 +8,7 @@ use Kassner\LogParser\LogParser;
 
 class Issue29Test extends \PHPUnit_Framework_TestCase
 {
-    public function testAuthUserWithDots()
+    public function testAuthUserWithDots(): void
     {
         $parser = new LogParser();
         $parser->setFormat('%h %l %u %t "%r" %>s %O "%{Referer}i" "%{User-Agent}i"');
@@ -25,7 +25,7 @@ class Issue29Test extends \PHPUnit_Framework_TestCase
         $this->assertEquals('curl/7.47.0', $entry->HeaderUserAgent);
     }
 
-    public function testAuthUserAndCustomFormatUsingDots()
+    public function testAuthUserAndCustomFormatUsingDots(): void
     {
         $parser = new LogParser();
         $parser->setFormat('%u.%t');

@@ -11,7 +11,7 @@ class Factory
      *
      * @return \Kassner\LogParser\LogParser
      */
-    public static function create()
+    public static function create(): LogParser
     {
         return new LogParser();
     }

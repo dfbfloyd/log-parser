@@ -41,7 +41,7 @@ class LogParser
     /**
      * @return string
      */
-    public static function getDefaultFormat()
+    public static function getDefaultFormat(): string
     {
         return self::$defaultFormat;
     }
@@ -69,7 +69,7 @@ class LogParser
      * @param string $placeholder
      * @param string $pattern
      */
-    public function addPattern($placeholder, $pattern)
+    public function addPattern($placeholder, $pattern): void
     {
         $this->patterns[$placeholder] = $pattern;
     }
@@ -77,7 +77,7 @@ class LogParser
     /**
      * @param string $format
      */
-    public function setFormat($format)
+    public function setFormat($format): void
     {
         // strtr won't work for "complex" header patterns
         // $this->pcreFormat = strtr("#^{$format}$#", $this->patterns);
@@ -99,7 +99,7 @@ class LogParser
      *
      * @throws FormatException
      */
-    public function parse($line)
+    public function parse($line): \stdClass
     {
         if (!preg_match($this->pcreFormat, $line, $matches)) {
             throw new FormatException($line);
@@ -121,7 +121,7 @@ class LogParser
     /**
      * @return \stdClass
      */
-    protected function createEntry()
+    protected function createEntry(): \stdClass
     {
         return new \stdClass();
     }
@@ -129,7 +129,7 @@ class LogParser
     /**
      * @return string
      */
-    public function getPCRE()
+    public function getPCRE(): string
     {
         return (string) $this->pcreFormat;
     }

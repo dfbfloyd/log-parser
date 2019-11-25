@@ -14,13 +14,13 @@ class RequestMethodTest extends \PHPUnit_Framework_TestCase
 {
     protected $parser = null;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->parser = new LogParser();
         $this->parser->setFormat('%m');
     }
 
-    protected function tearDown()
+    protected function tearDown(): void
     {
         $this->parser = null;
     }
@@ -28,7 +28,7 @@ class RequestMethodTest extends \PHPUnit_Framework_TestCase
     /**
      * @dataProvider successProvider
      */
-    public function testSuccess($line)
+    public function testSuccess($line): void
     {
         $entry = $this->parser->parse($line);
         $this->assertEquals($line, $entry->requestMethod);
@@ -38,12 +38,12 @@ class RequestMethodTest extends \PHPUnit_Framework_TestCase
      * @expectedException \Kassner\LogParser\FormatException
      * @dataProvider invalidProvider
      */
-    public function testInvalid($line)
+    public function testInvalid($line): void
     {
         $this->parser->parse($line);
     }
 
-    public function successProvider()
+    public function successProvider(): array
     {
         return array(
             array('OPTIONS'),
@@ -57,7 +57,7 @@ class RequestMethodTest extends \PHPUnit_Framework_TestCase
         );
     }
 
-    public function invalidProvider()
+    public function invalidProvider(): array
     {
         return array(
             array('GET '),

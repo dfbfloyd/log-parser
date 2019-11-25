@@ -8,7 +8,7 @@ use Kassner\LogParser\LogParser;
 
 class Issue30Test extends \PHPUnit_Framework_TestCase
 {
-    public function testCustomFormat()
+    public function testCustomFormat(): void
     {
         $parser = new LogParser();
         $parser->setFormat('%h %l %u %t "%r" %>s %O "%{Referer}i" "%{User-Agent}i"');

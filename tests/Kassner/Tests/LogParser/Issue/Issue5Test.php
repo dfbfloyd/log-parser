@@ -8,7 +8,7 @@ use Kassner\LogParser\LogParser;
 
 class Issue5Test extends \PHPUnit_Framework_TestCase
 {
-    public function testReferersAndAgents()
+    public function testReferersAndAgents(): void
     {
         $parser = new LogParser('%v:%p %h %l %u %t "%r" %>s %O "%{Referer}i" "%{User-Agent}i"');
         $entry = $parser->parse('www.example.com:80 ::1 - - [27/Oct/2013:06:27:33 +0000] "OPTIONS * HTTP/1.0" 200 126 "-" "Apache/2.2.22 (Ubuntu) (internal dummy connection)"');

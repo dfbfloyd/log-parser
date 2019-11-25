@@ -8,7 +8,7 @@ use Kassner\LogParser\LogParser;
 
 class VhostCombinedTest extends \PHPUnit_Framework_TestCase
 {
-    public function testFormat()
+    public function testFormat(): void
     {
         $parser = new LogParser('%v:%p %h %l %u %t "%r" %>s %O "%{Referer}i" "%{User-Agent}i"');
 

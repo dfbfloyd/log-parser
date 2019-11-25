@@ -6,7 +6,7 @@ namespace Kassner\Tests\LogParser\Provider;
 
 class HostName extends \PHPUnit_Framework_TestCase
 {
-    public function successProvider()
+    public function successProvider(): array
     {
         return array(
             array('php.net'),
@@ -18,7 +18,7 @@ class HostName extends \PHPUnit_Framework_TestCase
         );
     }
 
-    public function invalidProvider()
+    public function invalidProvider(): array
     {
         return array(
             array(''),
