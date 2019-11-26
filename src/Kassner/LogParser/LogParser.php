@@ -126,12 +126,4 @@ class LogParser
     {
         return new \stdClass();
     }
-
-    /**
-     * @return string
-     */
-    public function getPCRE(): string
-    {
-        return (string) $this->pcreFormat;
-    }
 }
