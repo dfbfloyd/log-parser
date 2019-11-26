@@ -7,7 +7,7 @@ namespace Kassner\Tests\LogParser\Apache;
 use Kassner\LogParser\LogParser;
 use PHPUnit\Framework\TestCase;
 
-class RefererTest extends TestCase
+class ReferrerTest extends TestCase
 {
     public function testFormat(): void
     {
