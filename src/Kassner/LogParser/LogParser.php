@@ -100,7 +100,7 @@ class LogParser
      *
      * @throws FormatException
      */
-    public function parse($line): \stdClass
+    public function parse(string $line): \stdClass
     {
         if (!preg_match($this->pcreFormat, $line, $matches)) {
             throw new FormatException($line);
