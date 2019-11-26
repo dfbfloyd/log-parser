@@ -46,19 +46,19 @@ class PercentTest extends TestCase
 
     public function successProvider(): array
     {
-        return array(
-            array('%'),
-        );
+        return [
+            ['%'],
+        ];
     }
 
     public function invalidProvider(): array
     {
-        return array(
-            array('0'),
-            array('1'),
-            array('dummy 1234'),
-            array('lala'),
-            array('-'),
-        );
+        return [
+            ['0'],
+            ['1'],
+            ['dummy 1234'],
+            ['lala'],
+            ['-'],
+        ];
     }
 }

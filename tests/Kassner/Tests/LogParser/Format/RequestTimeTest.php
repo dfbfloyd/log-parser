@@ -46,24 +46,24 @@ class RequestTimeTest extends TestCase
 
     public function successProvider(): array
     {
-        return array(
-            array('0.000'),
-            array('1.234'),
-            array('999.999'),
-            // apache provides %T without the milisecond part
-            array('3'),
-            array('0'),
-        );
+        return [
+            ['0.000'],
+            ['1.234'],
+            ['999.999'],
+            // apache provides %T without the miLlisecond part
+            ['3'],
+            ['0'],
+        ];
     }
 
     public function invalidProvider(): array
     {
-        return array(
-            array('abc '),
-            array(null),
-            array(''),
-            array(' '),
-            array('-'),
-        );
+        return [
+            ['abc '],
+            [null],
+            [''],
+            [' '],
+            ['-'],
+        ];
     }
 }

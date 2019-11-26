@@ -45,21 +45,21 @@ class ServeRequestTimeTest extends TestCase
 
     public function successProvider(): array
     {
-        return array(
-            array('2966894'),
-            array('4547567567'),
-            array('56867'),
-        );
+        return [
+            ['2966894'],
+            ['4547567567'],
+            ['56867'],
+        ];
     }
 
     public function invalidProvider(): array
     {
-        return array(
-            array(''),
-            array(null),
-            array('abc'),
-            array(' '),
-            array('-'),
-        );
+        return [
+            [''],
+            [null],
+            ['abc'],
+            [' '],
+            ['-'],
+        ];
     }
 }

@@ -46,20 +46,20 @@ class SchemeTest extends TestCase
 
     public function successProvider(): array
     {
-        return array(
-            array('http'),
-            array('https'),
-        );
+        return [
+            ['http'],
+            ['https'],
+        ];
     }
 
     public function invalidProvider(): array
     {
-        return array(
-            array('http '),
-            array('ftp'),
-            array(''),
-            array('h2'),
-            array('1'),
-        );
+        return [
+            ['http '],
+            ['ftp'],
+            [''],
+            ['h2'],
+            ['1'],
+        ];
     }
 }
