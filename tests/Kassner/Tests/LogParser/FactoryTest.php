@@ -8,19 +8,26 @@ use Kassner\LogParser\Factory;
 use Kassner\LogParser\LogParser;
 use PHPUnit\Framework\TestCase;
 
+/**
+ * This class is used to unit test the methods contained in the Factory class.
+ *
+ * @package Kassner\LogParser
+ * @author  Don Bowlby <dfbfloyd@gmail.com>
+ */
 class FactoryTest extends TestCase
 {
 
-  public $parser;
-
-  public function setUp(): void
-  {
-    $this->parser = new LogParser();
-  }
-
-  public static function testCreate(): void
+  /**
+   * Tests the Factory::create method
+   *
+   * @covers \Kassner\LogParser\Factory::create
+   *
+   * @throws \PHPUnit\Framework\ExpectationFailedException
+   * @throws \SebastianBergmann\RecursionContext\InvalidArgumentException
+   */
+  public function testCreate(): void
   {
     $result = Factory::create();
-    $this->assertSame($this->parser, $result);
+    $this->assertEquals(new LogParser(), $result);
   }
 }

@@ -1,5 +1,7 @@
 <phpunit
-  bootstrap="tests/bootstrap.php"
+  backupGlobals="false"
+  backupStaticAttributes="false"
+  processIsolation="false"
   colors="true"
   verbose="true"
   beStrictAboutTestsThatDoNotTestAnything="true"
@@ -7,10 +9,13 @@
   convertErrorsToExceptions="true"
   convertNoticesToExceptions="true"
   convertWarningsToExceptions="true"
+  bootstrap="tests/bootstrap.php"
 >
     <testsuites>
-        <testsuite name="Test Suite log-parser Package">
-            <directory>tests</directory>
+        <testsuite name="Log Parser Unit Tests">
+            <directory>tests/Kassner</directory>
+            <file phpVersion="7.1">Tests/LogParser/FactoryTest.php</file>
+            <file phpVersion="7.1">Tests/LogParser/LogParserTest.php</file>
         </testsuite>
     </testsuites>
 </phpunit>
